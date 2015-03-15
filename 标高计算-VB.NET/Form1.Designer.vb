@@ -22,12 +22,12 @@ Partial Class Form1
     '不要使用代码编辑器修改它。
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.文件ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.打开ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -40,6 +40,8 @@ Partial Class Form1
         Me.复制ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.粘贴ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.TextBox11 = New System.Windows.Forms.TextBox()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.TextBox10 = New System.Windows.Forms.TextBox()
@@ -69,6 +71,11 @@ Partial Class Form1
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+        Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
+        Me.帮助ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.使用方法ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.关于ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -77,7 +84,7 @@ Partial Class Form1
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.文件ToolStripMenuItem, Me.编辑ToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.文件ToolStripMenuItem, Me.编辑ToolStripMenuItem, Me.帮助ToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(784, 25)
@@ -148,6 +155,8 @@ Partial Class Form1
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.Button2)
+        Me.GroupBox1.Controls.Add(Me.Button1)
         Me.GroupBox1.Controls.Add(Me.TextBox11)
         Me.GroupBox1.Controls.Add(Me.Label11)
         Me.GroupBox1.Controls.Add(Me.TextBox10)
@@ -172,15 +181,33 @@ Partial Class Form1
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Location = New System.Drawing.Point(5, 30)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(150, 570)
+        Me.GroupBox1.Size = New System.Drawing.Size(150, 640)
         Me.GroupBox1.TabIndex = 1
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "输入数据"
         '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(5, 610)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(100, 23)
+        Me.Button2.TabIndex = 12
+        Me.Button2.Text = "计算标高"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(5, 575)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(100, 23)
+        Me.Button1.TabIndex = 11
+        Me.Button1.Text = "生成计算表格"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'TextBox11
         '
         Me.TextBox11.ImeMode = System.Windows.Forms.ImeMode.Disable
-        Me.TextBox11.Location = New System.Drawing.Point(3, 540)
+        Me.TextBox11.Location = New System.Drawing.Point(5, 540)
         Me.TextBox11.Name = "TextBox11"
         Me.TextBox11.Size = New System.Drawing.Size(100, 21)
         Me.TextBox11.TabIndex = 10
@@ -197,7 +224,7 @@ Partial Class Form1
         'TextBox10
         '
         Me.TextBox10.ImeMode = System.Windows.Forms.ImeMode.Disable
-        Me.TextBox10.Location = New System.Drawing.Point(3, 490)
+        Me.TextBox10.Location = New System.Drawing.Point(5, 490)
         Me.TextBox10.Name = "TextBox10"
         Me.TextBox10.Size = New System.Drawing.Size(100, 21)
         Me.TextBox10.TabIndex = 9
@@ -214,7 +241,7 @@ Partial Class Form1
         'TextBox9
         '
         Me.TextBox9.ImeMode = System.Windows.Forms.ImeMode.Disable
-        Me.TextBox9.Location = New System.Drawing.Point(3, 440)
+        Me.TextBox9.Location = New System.Drawing.Point(5, 440)
         Me.TextBox9.Name = "TextBox9"
         Me.TextBox9.Size = New System.Drawing.Size(100, 21)
         Me.TextBox9.TabIndex = 8
@@ -231,7 +258,7 @@ Partial Class Form1
         'TextBox8
         '
         Me.TextBox8.ImeMode = System.Windows.Forms.ImeMode.Disable
-        Me.TextBox8.Location = New System.Drawing.Point(3, 390)
+        Me.TextBox8.Location = New System.Drawing.Point(5, 390)
         Me.TextBox8.Name = "TextBox8"
         Me.TextBox8.Size = New System.Drawing.Size(100, 21)
         Me.TextBox8.TabIndex = 7
@@ -249,7 +276,7 @@ Partial Class Form1
         '
         Me.TextBox7.BackColor = System.Drawing.SystemColors.Info
         Me.TextBox7.ImeMode = System.Windows.Forms.ImeMode.Disable
-        Me.TextBox7.Location = New System.Drawing.Point(3, 340)
+        Me.TextBox7.Location = New System.Drawing.Point(5, 340)
         Me.TextBox7.Name = "TextBox7"
         Me.TextBox7.ReadOnly = True
         Me.TextBox7.Size = New System.Drawing.Size(100, 21)
@@ -267,7 +294,7 @@ Partial Class Form1
         'TextBox6
         '
         Me.TextBox6.ImeMode = System.Windows.Forms.ImeMode.Disable
-        Me.TextBox6.Location = New System.Drawing.Point(3, 290)
+        Me.TextBox6.Location = New System.Drawing.Point(5, 290)
         Me.TextBox6.Name = "TextBox6"
         Me.TextBox6.Size = New System.Drawing.Size(100, 21)
         Me.TextBox6.TabIndex = 6
@@ -284,7 +311,7 @@ Partial Class Form1
         'TextBox5
         '
         Me.TextBox5.ImeMode = System.Windows.Forms.ImeMode.Disable
-        Me.TextBox5.Location = New System.Drawing.Point(3, 240)
+        Me.TextBox5.Location = New System.Drawing.Point(5, 240)
         Me.TextBox5.Name = "TextBox5"
         Me.TextBox5.Size = New System.Drawing.Size(100, 21)
         Me.TextBox5.TabIndex = 5
@@ -313,7 +340,7 @@ Partial Class Form1
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(65, 12)
         Me.Label4.TabIndex = 0
-        Me.Label4.Text = "边坡点标高"
+        Me.Label4.Text = "变坡点标高"
         '
         'TextBox3
         '
@@ -330,7 +357,7 @@ Partial Class Form1
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(89, 12)
         Me.Label3.TabIndex = 0
-        Me.Label3.Text = "边坡点中心桩号"
+        Me.Label3.Text = "变坡点中心桩号"
         '
         'TextBox2
         '
@@ -371,7 +398,7 @@ Partial Class Form1
         Me.GroupBox2.Controls.Add(Me.DataGridView1)
         Me.GroupBox2.Location = New System.Drawing.Point(165, 30)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(610, 570)
+        Me.GroupBox2.Size = New System.Drawing.Size(610, 640)
         Me.GroupBox2.TabIndex = 2
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "输出数据"
@@ -381,14 +408,14 @@ Partial Class Form1
         Me.DataGridView1.AllowUserToAddRows = False
         Me.DataGridView1.AllowUserToDeleteRows = False
         Me.DataGridView1.AllowUserToResizeColumns = False
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("宋体", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle7.Font = New System.Drawing.Font("宋体", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5})
         Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
@@ -396,15 +423,15 @@ Partial Class Form1
         Me.DataGridView1.Location = New System.Drawing.Point(3, 17)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowTemplate.Height = 23
-        Me.DataGridView1.Size = New System.Drawing.Size(604, 550)
+        Me.DataGridView1.Size = New System.Drawing.Size(604, 620)
         Me.DataGridView1.TabIndex = 0
         '
         'Column1
         '
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle2.Format = "N0"
-        DataGridViewCellStyle2.NullValue = Nothing
-        Me.Column1.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle8.Format = "N0"
+        DataGridViewCellStyle8.NullValue = Nothing
+        Me.Column1.DefaultCellStyle = DataGridViewCellStyle8
         Me.Column1.HeaderText = "墩台编号"
         Me.Column1.Name = "Column1"
         Me.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
@@ -412,10 +439,10 @@ Partial Class Form1
         '
         'Column2
         '
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle3.Format = "N3"
-        DataGridViewCellStyle3.NullValue = Nothing
-        Me.Column2.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle9.Format = "N3"
+        DataGridViewCellStyle9.NullValue = Nothing
+        Me.Column2.DefaultCellStyle = DataGridViewCellStyle9
         Me.Column2.HeaderText = "中心桩号"
         Me.Column2.Name = "Column2"
         Me.Column2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
@@ -423,18 +450,19 @@ Partial Class Form1
         '
         'Column3
         '
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle4.Format = "N3"
-        Me.Column3.DefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle10.Format = "N3"
+        Me.Column3.DefaultCellStyle = DataGridViewCellStyle10
         Me.Column3.HeaderText = "到中心线距离"
         Me.Column3.Name = "Column3"
         Me.Column3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.Column3.ToolTipText = "中心线左侧为正"
         '
         'Column4
         '
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle5.Format = "N3"
-        Me.Column4.DefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle11.Format = "N3"
+        Me.Column4.DefaultCellStyle = DataGridViewCellStyle11
         Me.Column4.HeaderText = "中心线位置标高"
         Me.Column4.Name = "Column4"
         Me.Column4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
@@ -442,25 +470,48 @@ Partial Class Form1
         '
         'Column5
         '
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle6.Format = "N3"
-        Me.Column5.DefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle12.Format = "N3"
+        Me.Column5.DefaultCellStyle = DataGridViewCellStyle12
         Me.Column5.HeaderText = "点位置路面标高"
         Me.Column5.Name = "Column5"
         Me.Column5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
         Me.Column5.Width = 140
         '
+        'OpenFileDialog1
+        '
+        Me.OpenFileDialog1.FileName = "OpenFileDialog1"
+        '
+        '帮助ToolStripMenuItem
+        '
+        Me.帮助ToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.使用方法ToolStripMenuItem, Me.关于ToolStripMenuItem})
+        Me.帮助ToolStripMenuItem.Name = "帮助ToolStripMenuItem"
+        Me.帮助ToolStripMenuItem.Size = New System.Drawing.Size(44, 21)
+        Me.帮助ToolStripMenuItem.Text = "帮助"
+        '
+        '使用方法ToolStripMenuItem
+        '
+        Me.使用方法ToolStripMenuItem.Name = "使用方法ToolStripMenuItem"
+        Me.使用方法ToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.使用方法ToolStripMenuItem.Text = "使用方法"
+        '
+        '关于ToolStripMenuItem
+        '
+        Me.关于ToolStripMenuItem.Name = "关于ToolStripMenuItem"
+        Me.关于ToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.关于ToolStripMenuItem.Text = "关于"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(784, 611)
+        Me.ClientSize = New System.Drawing.Size(784, 681)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "Form1"
-        Me.Text = "标高计算程序-V0.1"
+        Me.Text = "标高计算程序-V0.2"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
@@ -507,10 +558,17 @@ Partial Class Form1
     Friend WithEvents TextBox9 As System.Windows.Forms.TextBox
     Friend WithEvents Label9 As System.Windows.Forms.Label
     Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
+    Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents Column1 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Column2 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Column3 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Column4 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Column5 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents OpenFileDialog1 As System.Windows.Forms.OpenFileDialog
+    Friend WithEvents SaveFileDialog1 As System.Windows.Forms.SaveFileDialog
+    Friend WithEvents 帮助ToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents 使用方法ToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents 关于ToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
 End Class
