@@ -318,6 +318,8 @@ Public Class Form1
     End Function
     ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
     '菜单功能部分
+
+
     '新建按钮
     Private Sub 新建ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles 新建ToolStripMenuItem.Click
         ResetAll()
@@ -357,3 +359,4 @@ End Class
 '3、帮助及提示
 
 '20150323更新0.3版本，菜单项打开、保存、新建、退出已经初步实现。
+'20150323更新0.31版本，降低.net框架版本为2.0
