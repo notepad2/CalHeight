@@ -143,18 +143,25 @@ Public Class Form1
     Public Function CalHeight(ByVal r As Double, ByVal t As Double, ByVal zxzh As Double, ByVal zxbg As Double,
                       ByVal qpd As Double, ByVal hpd As Double, ByVal jszh As Double) As Double
         Dim e As Double
+        Dim flag As Integer
 
         e = Math.Sqrt(r * r + t * t) - r
+
+        If (qpd > hpd) Then
+            flag = 1
+        Else
+            flag = -1
+        End If
 
         If jszh < zxzh - t Then
             CalHeight = zxbg + (jszh - zxzh) * qpd
         ElseIf jszh > zxzh + t Then
             CalHeight = zxbg + (jszh - zxzh) * hpd
         Else
-            If (qpd >= 0) Then
-                CalHeight = Math.Round(zxbg - e - (r - Math.Sqrt(r * r - (zxzh - jszh) * (zxzh - jszh))), 3)
+            If (jszh < zxzh) Then
+                CalHeight = Math.Round(zxbg - qpd * (zxzh - jszh) - flag * Math.Pow(t - Math.Abs(zxzh - jszh), 2) / 2 / r, 3)
             Else
-                CalHeight = Math.Round(zxbg + e + (r - Math.Sqrt(r * r - (zxzh - jszh) * (zxzh - jszh))), 3)
+                CalHeight = Math.Round(zxbg - hpd * (zxzh - jszh) - flag * Math.Pow(t - Math.Abs(zxzh - jszh), 2) / 2 / r, 3)
             End If
         End If
     End Function
@@ -360,3 +367,4 @@ End Class
 
 '20150323更新0.3版本，菜单项打开、保存、新建、退出已经初步实现。
 '20150323更新0.31版本，降低.net框架版本为2.0
+'20150603更新0.32版本，修正道路中心线上的点标高算法错误。
