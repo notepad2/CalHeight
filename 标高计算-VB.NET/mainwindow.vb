@@ -1,7 +1,7 @@
 ﻿Imports System
 Imports System.IO
 Imports System.Text
-Public Class Form1
+Public Class mainwindow
 
     Dim r, t, zxzh, zxbg, qpd, hpd, ypj, hp As Double
     Dim dunhao, hxgs, i, j, hangshu As Integer
@@ -102,6 +102,10 @@ Public Class Form1
     Public Function Cale(ByVal r As Double, ByVal t As Double) As Double
         Cale = Math.Round(Math.Sqrt(r * r + t * t) - r, 3)
     End Function
+
+    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+
+    End Sub
     '重新生成计算表格函数
     Public Function ReGen(ByVal dh As Integer, ByVal hx As Integer)
 
@@ -368,3 +372,4 @@ End Class
 '20150323更新0.3版本，菜单项打开、保存、新建、退出已经初步实现。
 '20150323更新0.31版本，降低.net框架版本为2.0
 '20150603更新0.32版本，修正道路中心线上的点标高算法错误。
+'20200209更新0.33版本，修改窗口名为mainwindow，添加应用程序图标。
