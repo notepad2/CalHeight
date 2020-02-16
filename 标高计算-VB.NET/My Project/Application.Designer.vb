@@ -32,7 +32,7 @@ Namespace My
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
-            Me.MainForm = Global.标高计算_VB.NET.mainwindow
+            Me.MainForm = Global.CalHeight_VB.NET.mainwindow
         End Sub
     End Class
 End Namespace

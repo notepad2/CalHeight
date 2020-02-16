@@ -64,9 +64,9 @@ Namespace My
     Friend Module MySettingsProperty
         
         <Global.System.ComponentModel.Design.HelpKeywordAttribute("My.Settings")>  _
-        Friend ReadOnly Property Settings() As Global.标高计算_VB.NET.My.MySettings
+        Friend ReadOnly Property Settings() As Global.CalHeight_VB.NET.My.MySettings
             Get
-                Return Global.标高计算_VB.NET.My.MySettings.Default
+                Return Global.CalHeight_VB.NET.My.MySettings.Default
             End Get
         End Property
     End Module
